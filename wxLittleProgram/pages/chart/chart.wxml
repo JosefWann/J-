@@ -1,0 +1,20 @@
+<!--pages/chart/chart.wxml-->
+<view>
+    <view class = "header {{increase>=0?'appreciate':'devaluate'}}">
+        <view><text class = "title">{{subMatter}}</text>\t{{price}}\n</view>
+        <view class = "data">
+            <text wx:if = "{{increase>=0}}">+</text>{{increase}}%\t
+            <text wx:if = "{{increase>=0}}">+</text>{{bp}}基点
+        </view>
+    </view>
+    <view class = "future" style = "color:#afafaf">期货价格</view>
+    <view class = "future {{increaseF>=0?'appreciate':'devaluate'}}">
+        {{priceF}}\t
+        <text wx:if = "{{increaseF>=0}}">+</text>{{increaseF}}%\t
+        <text wx:if = "{{increaseF>=0}}">+</text>{{bpF}}基点\t{{diffExp}}\t{{difference}}%
+    </view>
+</view>
+<view class = "chartTitle">现货走势</view>
+<canvas canvas-id="current"></canvas>
+<view class = "chartTitle">期货走势</view>
+<canvas canvas-id="future"></canvas>

@@ -1,0 +1,53 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/blog/blog",
+    "pages/user/user",
+    "pages/dictionary/dictionary",
+    "pages/essay/essay",
+    "pages/words/words",
+    "pages/signature/signature",
+    "pages/wordbook/wordbook",
+    "pages/mycontent/mycontent",
+    "pages/myfav/myfav",
+    "pages/mytest/mytest",
+    "pages/chart/chart"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "J记证券",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "color": "#8a8a8a",
+    "selectedColor": "#f15642",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "image/homeD.png",
+        "selectedIconPath": "image/homeS.png"
+      },
+      {
+        "pagePath": "pages/blog/blog",
+        "text": "博客",
+        "iconPath": "image/blogD.png",
+        "selectedIconPath": "image/blogS.png"
+      },
+      {
+        "pagePath": "pages/dictionary/dictionary",
+        "text": "词典",
+        "iconPath": "image/pediaD.png",
+        "selectedIconPath": "image/pediaS.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "我的",
+        "iconPath": "image/userD.png",
+        "selectedIconPath": "image/userS.png"
+      }
+    ]
+  }
+}

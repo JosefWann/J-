@@ -1,0 +1,4 @@
+<!--pages/mytest/mytest.wxml-->
+<view class = "whole" style = "height:{{windowHeight}}rpx">
+    <view class = "content">暂无测试</view>
+</view>

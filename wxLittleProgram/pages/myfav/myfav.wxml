@@ -1,0 +1,11 @@
+<!--pages/myfav/myfav.wxml--> 
+<view class = "whole" style = "height:{{windowHeight}}rpx">
+    <view class = "foldEssay" wx:for = "{{foldEssay}}" wx:key = "{{index}}" data-id = "{{index}}" bindtap = 'toEssay'>
+        <view class = "title">{{item.title}}</view>
+        <view class = "userInfo">
+            <view>{{item.nickName}}</view>
+            <image src = "{{item.avatar}}"></image>
+        </view>
+        <view class = "content">{{item.content}}</view>
+    </view>
+</view>

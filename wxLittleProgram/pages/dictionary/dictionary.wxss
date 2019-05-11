@@ -1,0 +1,40 @@
+/* pages/dictionary/dictionary.wxss */
+.whole{
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+}
+.leftCol{
+  width:250rpx;
+  height:100%;
+  display: flex;
+  flex-direction: column;
+  /*background-color:#f3f3f3;*/
+}
+.portofolio{
+  height: 100rpx;
+  text-align: center;
+  color:gray;
+  line-height: 100rpx;
+}
+.portClicked{
+  border-left: red solid 10rpx;
+}
+.portSwiper{
+  background-color: #f3f3f3;
+  color:gray;
+  width:500rpx;
+}
+.portDist{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.portItem{
+  padding: 10rpx 30rpx;
+  font-size: 30rpx;
+  height: 50rpx;
+  border: gray solid 1rpx;
+  border-radius:20rpx;
+  margin: 20rpx;
+}

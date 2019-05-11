@@ -1,0 +1,19 @@
+/* pages/wordbook/wordbook.wxss */
+.whole{
+  background-color: #f0f0f0;
+}
+.bodyItem{
+  height:100rpx;
+  background-color: white;
+  color:#afafaf;
+  display: flex;
+  align-items: center;
+  font-size: 35rpx;
+  border-top: lightgray solid 1rpx;
+  justify-content: space-between;
+  padding: 0 30rpx;
+}
+.bodyItem>image{
+  width: 50rpx;
+  height: 50rpx;
+}

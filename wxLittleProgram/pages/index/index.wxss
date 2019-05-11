@@ -1,0 +1,225 @@
+/**index.wxss**/
+.tpStockSelect{
+  display:flex;
+  flex-direction: row;
+}
+.tpStock{
+  text-align: center;
+  width:250rpx;
+}
+.swiStock{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  width:100%;
+}
+.swiItem{
+  width: 249rpx;
+  border-bottom: lightgray solid 1rpx;
+  height: 170rpx;
+}
+.swiStock>view:nth-child(3n+2){
+  border-left: lightgray solid 1rpx;
+  border-right: lightgray solid 1rpx;
+}
+.stockItem{
+  text-align: center;
+  font-size: 36rpx;
+  margin-top:20rpx;
+  color:gray;
+}
+.stockPrice{
+  text-align:center;
+  font-size:35rpx;
+}
+.stockIncrease{
+  text-align: center;
+  font-size:33rpx;
+}
+.appreciate{
+  color:red;
+}
+.devaluate{
+  color:lightgreen;
+}
+.swiIndex{
+  background-color: lightgoldenrodyellow;
+}
+.swiData{
+  font-size:30rpx;
+  color:gray;
+  line-height: 60rpx;
+  margin-left:20rpx;
+}
+.itemTitle{
+  font-size:36rpx;
+  color:gray;
+  text-align: center;
+  margin: 20rpx 0;
+}
+.calTable{
+  display: flex;
+  flex-direction: row;
+  font-size: 33rpx;
+  color:gray;
+  text-align: center;
+}
+.calTable>view:nth-child(1) {
+  width: 149rpx;
+  border-right:gray solid 1rpx;
+}
+.calTable>view:nth-child(2) {
+  width:299rpx;
+  border-right: gray solid 1rpx;
+}
+.calTable>view:nth-child(3) {
+  width:300rpx
+}
+.calItem{
+  height:210rpx;
+  width:100%;
+  background-color:lightblue;
+}
+.calender{
+  display: flex;
+  flex-direction: row;
+  height:60rpx;
+  line-height: 60rpx;
+  font-size: 30rpx;
+  text-align: center;
+}
+.calender>view:nth-child(1){
+  width:149rpx;
+  border-right: gray solid 1rpx;
+}
+.calender>view:nth-child(2){
+  width:299rpx;
+  border-right: gray solid 1rpx;
+}
+.calender>view:nth-child(3){
+  width:300rpx;
+}
+.calender:nth-child(odd) {
+  background-color: lightgray;
+}
+.forex{
+  text-align: left;
+  margin: 0 20rpx;
+}
+.forexTitle{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 20rpx 0;
+}
+.chartBox{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 0 10rpx;
+}
+.chart1{
+  width:100%;
+  height: 420rpx;
+  margin-bottom:10rpx;
+  border-bottom: lightgray solid 1rpx;
+  border-top: lightgray solid 1rpx;
+}
+.chart2{
+  width:345rpx;
+  border: lightgray solid 1rpx;
+  margin-bottom: 10rpx;
+  height:250rpx;
+}
+.chartL1{
+  font-size:35rpx;
+  text-align: center;
+}
+.chartL2{
+  font-size:28rpx;
+  text-align: center;
+}
+.chartL11{
+  font-size:50rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  margin: 0 30rpx;
+}
+.chartL12{
+  font-size: 30rpx;
+}
+.line1{
+  display: flex;
+  flex-direction: row;
+  margin:10rpx 0;
+}
+.chartImg{
+  width:314rpx;
+  height: 150rpx;
+  margin: 0 15rpx; 
+}
+.chartImg1{
+  width: 720rpx;
+  height: 300rpx;
+  margin: 0 15rpx;
+}
+.hideChart{
+  border:none;
+}
+.addBox{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.dialogContainer {
+  position: fixed;
+  width: 600rpx;
+  height: 900rpx;
+  bottom: 100rpx;
+  left: 0rpx;
+  right: 0rpx;
+  margin: auto;
+  background: #f8f8f8;
+  transform: translateY(300%);
+  transition: all 0.4s ease;
+  z-index: 12;
+  border-radius: 20rpx;
+  box-shadow: 0px 3px 3px 2px gainsboro;
+}
+.dialogShow .dialogContainer {
+  transform: translateY(0);
+}
+.dialogShow {
+  display: block;
+}
+.innerItem{
+  margin: 18rpx 20rpx;
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+}
+.innerBtn{
+  display:flex;
+  flex-direction:row;
+  justify-content: space-around;
+}
+.bottomBtn{
+  width: 250rpx;
+  height:80rpx;
+  text-align: center;
+  line-height: 80rpx;
+  border-radius: 10rpx;
+}
+.save{
+  background-color: #f15642;
+  color:white;
+}
+.cancel{
+  background-color:lightgray;
+}
+.subMatter{
+  color:gray;
+  margin-left:50rpx;
+}

@@ -1,0 +1,48 @@
+<!--pages/user/user.wxml-->
+<view class = "whole" style = "height:{{windowHeight}}rpx">
+    <view wx:if = "{{gotInfo==true}}" class = "header">
+        <image class = "avatarImg" src = "{{userInfo.avatarUrl}}"></image>
+        <view>
+            <view class = "headerName">{{userInfo.nickName}}</view>
+            <view class = "headerSign">{{signature}}</view>
+        </view>
+    </view>
+    <view wx:else class = "header">
+        <button open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="onGotUserInfo">获取用户信息</button>
+    </view>
+    <view class = "bodyItem sign" bindtap = "updateSign">
+        <image src = "/image/mypen.png"></image>
+        <view class = "bodyContent last">
+            <view><text>个性签名</text></view>
+            <image src = "/image/toRight.png"></image>
+        </view>
+    </view>
+    <view class = "bodyItem" bindtap = "toWordBook">
+        <image src = "/image/myPedia.png"></image>
+        <view class = "bodyContent">
+            <view><text>我的生词本</text></view>
+            <image src = "/image/toRight.png"></image>
+        </view>
+    </view>
+    <view class = "bodyItem" bindtap = "toMyContent">
+        <image src = "/image/myEssay.png"></image>
+        <view class = "bodyContent">
+            <view><text>我的文章</text></view>
+            <image src = "/image/toRight.png"></image>
+        </view>
+    </view>
+    <view class = "bodyItem" bindtap = "toMyFav">
+        <image src = "/image/myStar.png"></image>
+        <view class = "bodyContent">
+            <view><text>我的收藏</text></view>
+            <image src = "/image/toRight.png"></image>
+        </view>
+    </view>
+    <view class = "bodyItem" bindtap = "toMyTest">
+        <image src = "/image/myTest.png"></image>
+        <view class = "bodyContent last">
+            <view><text>我的测试</text></view>
+            <image src = "/image/toRight.png"></image>
+        </view>
+    </view>
+</view>

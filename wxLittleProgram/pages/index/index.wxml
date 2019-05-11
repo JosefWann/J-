@@ -1,0 +1,96 @@
+<view>
+    <view class = "tpStockSelect">
+        <view class = "tpStock" style = "color:{{item.color}};border-bottom:{{item.border}}" wx:for = "{{topStock}}" wx:key = "{{index}}" id = "{{index}}" bindtap = "stockSwitch">
+            {{item.region}}
+        </view>
+    </view>
+    <swiper current = "{{curSwi}}" style = "height:340rpx;" bindchange = 'swiping'>
+        <block wx:for = "{{topStock}}" wx:for-item = "val" wx:key = "{{index}}">
+            <swiper-item class = "swiStock">
+                <view wx:for = "{{val.portofolio}}" wx:key = "{{portIndex}}" wx:for-item = "port" class = "swiItem" bindtap = "viewStockChart" data-id = "{{index}}">
+                    <view class = "stockItem">{{port.stockItem}}</view>
+                    <view wx:if = "{{port.increase>=0}}" class = "appreciate">
+                        <view class = "stockPrice">{{port.price}}</view>
+                        <view class = "stockIncrease">+{{port.increase}}%</view>
+                    </view>
+                    <view wx:else class = "devaluate">
+                        <view class = "stockPrice">{{port.price}}</view>
+                        <view class = "stockIncrease">{{port.increase}}%</view>
+                    </view>
+                </view>
+            </swiper-item>
+        </block>
+    </swiper>
+    <swiper style = "height:60rpx" vertical = 'true' class = "swiIndex" autoplay = 'true' interval = "5000" circular = "true">
+        <block wx:for = "{{finData}}" wx:key = "{{index}}">
+            <swiper-item>
+                <view class = "swiData">上月{{item.state}}国{{item.type}}{{item.increaseType}}{{item.incDec}}{{item.dataValue}}个百分点，{{item.hl}}于预期</view>
+            </swiper-item>
+        </block>
+    </swiper>
+    <view>
+        <view class = "itemTitle">本月财经日历</view>
+        <view class = "calTable">
+            <view>日期</view>
+            <view>事项</view>
+            <view>预期</view>
+        </view>
+        <view wx:for = "{{calender}}" wx:key = "{{index}}" class = "calender">
+            <view>{{item.date}}</view>
+            <view>{{item.event}}</view>
+            <view>{{item.expect}}</view>
+        </view>
+    </view>
+    <view>
+        <view class = "forexTitle">
+            <view class = "itemTitle forex">自选行情列表</view>
+            <image wx:if = "{{line==1}}" bindtap = "changeLine" style = "height:40rpx;width:40rpx;margin-right:20rpx;" src = "/image/twoPerLine.png"></image>
+            <image wx:else bindtap = "changeLine" style = "height:40rpx;width:40rpx;margin-right:20rpx;" src = "/image/onePerLine.png"></image>
+        </view>
+        <view class = "chartBox" wx:if = "{{line==2}}">
+            <view wx:for = "{{forexDisplay}}" wx:key = "{{index}}" id = "{{index}}" class = "chart2" bindtap = "viewChart"> 
+                <view class = "{{item.increase>=0?'appreciate':'devaluate'}}">
+                    <view class = "chartL1">{{item.subMatter}}\t{{item.price}}</view>
+                    <view class = "chartL2">
+                        <text wx:if = "{{item.increase>=0}}">+</text>{{item.increase}}%
+                        <text wx:if = "{{item.increase>=0}}">+</text>{{item.bp}}基点
+                    </view>
+                    <image class = "chartImg" src = "/image/chart.png"></image>
+                </view>    
+            </view>
+            <view class = "chart2 addBox" bindtap = "addSec">
+                <image style = "width:60rpx;height:60rpx;" src = "/image/addStock.png"></image>
+            </view>
+            <view wx:if = "{{forexDisplay.length%2==0}}" class = "chart2 hideChart"></view>
+        </view>
+        <view wx:else>
+            <view wx:for = "{{forexDisplay}}" wx:key = "{{index}}" id = "{{index}}" class = "chart1" bindtap = "viewChart">
+                <view class = "{{item.increase>=0?'appreciate':'devaluate'}} line1">
+                    <view class = "chartL11">{{item.subMatter}}\t{{item.price}}</view>
+                    <view class = "chartL12">
+                        <view><text wx:if = "{{item.increase>=0}}">+</text>{{item.increase}}%</view>
+                        <view><text wx:if = "{{item.increase>=0}}">+</text>{{item.bp}}基点</view>
+                    </view>
+                </view>
+                <image class = "chartImg1" src = "/image/chart.png"></image>
+            </view>
+            <view class = "chart1 addBox" bindtap = "addSec">
+                <image style = "width:100rpx;height:100rpx;" src = "/image/addStock.png"></image>
+            </view>
+        </view>
+    </view>
+</view>
+<view class = "dialog {{addSec==true?'dialogShow':''}}">
+    <view class = "dialogContainer">
+        <view class = "itemTitle forex">可选行情</view>
+        <view wx:for = "{{forex}}" wx:key = "{{index}}" class = "innerItem">
+            <image id = "{{index}}" bindtap = "changeStatus" wx:if = "{{editlist[index].selected==true}}" src = "/image/removeItem.png" style = "height:40rpx;width:40rpx;"></image>
+            <image id = "{{index}}" bindtap = "changeStatus" wx:else src = "/image/addItem.png" style = "height:40rpx;width:40rpx;"></image>
+            <view class = "subMatter">{{item.subMatter}}</view>
+        </view>
+        <view class = "innerBtn">
+            <view class = "bottomBtn cancel" bindtap = "cancelSec">取消</view>
+            <view class = "bottomBtn save" bindtap = "saveSec">保存</view>
+        </view>
+    </view>
+</view>

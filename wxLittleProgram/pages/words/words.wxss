@@ -1,0 +1,46 @@
+/* pages/words/words.wxss */
+.headerImg{
+  width: 100%;
+  height: 400rpx;
+}
+.wordHeader{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.wordTitle{
+  font-size: 50rpx;
+  margin:0rpx 40rpx;
+  line-height: 100rpx;
+  color: gray;
+}
+.wordContent{
+  color: gray;
+  font-size: 30rpx;
+  margin: 0 30rpx;
+}
+.folded{
+  color: #0000ff;
+  border: #0000ff solid 1rpx;
+  border-radius: 10rpx;
+  font-size: 30rpx;
+  padding: 10rpx 20rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.unfolded{
+  color: #afafaf;
+  border: #afafaf solid 1rpx;
+  border-radius: 10rpx;
+  font-size: 30rpx;
+  padding: 10rpx 20rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.folded>image, .unfolded>image{
+  height: 30rpx;
+  width: 30rpx;
+  margin-right: 10rpx;
+}

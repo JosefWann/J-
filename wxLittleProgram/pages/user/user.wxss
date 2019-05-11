@@ -1,0 +1,63 @@
+/* pages/user/user.wxss */
+.whole{
+  background-color: #f0f0f0;
+}
+.header{
+  background-color: white;
+  height: 250rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 20rpx;
+}
+.avatarImg{
+  width:150rpx;
+  height:150rpx;
+  border-radius:75rpx;
+  margin:50rpx;
+}
+.headerName{
+  font-size:45rpx;
+  line-height: 50rpx;
+  color:gray;
+}
+.headerSign{
+  font-size:35rpx;
+  line-height: 50rpx;
+  color:gray;
+  margin-top: 30rpx;
+}
+.bodyItem{
+  height:100rpx;
+  background-color: white;
+  color:#afafaf;
+  display: flex;
+  align-items: center;
+  font-size: 35rpx;
+}
+.sign{
+  margin-bottom: 20rpx;
+}
+.bodyItem>image{
+  width: 50rpx;
+  height: 50rpx;
+  margin: 0 30rpx;
+}
+.bodyContent{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 640rpx;
+  border-bottom: #f0f0f0 solid 1rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+}
+.bodyContent>image{
+  width: 40rpx;
+  height: 40rpx;
+  margin: 0 20rpx;
+}
+.last{
+  border-bottom:none;
+}

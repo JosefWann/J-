@@ -1,0 +1,4 @@
+<!--pages/mycontent/mycontent.wxml-->
+<view class = "whole" style = "height:{{windowHeight}}rpx">
+    <view class = "content">暂无文章</view>
+</view>

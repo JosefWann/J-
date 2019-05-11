@@ -1,0 +1,7 @@
+<!--pages/wordbook/wordbook.wxml-->
+<view class = "whole" style = "height:{{windowHeight}}rpx">
+    <view class = "bodyItem" bindtap = "toWords" wx:for = "{{myWords}}" wx:key = "{{index}}" data-id = "{{index}}">
+        <view>{{item}}</view>
+        <image src = "/image/toRight.png"></image>
+    </view>
+</view>

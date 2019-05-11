@@ -1,0 +1,14 @@
+<view class = "whole">
+    <view class = "leftCol">
+        <view wx:for = "{{portofolio}}" wx:key = "{{index}}" class = "portofolio {{item.clicked==true?'portClicked':''}}" id = "{{index}}" bindtap = "selectPort">{{item.keyword}}</view>
+    </view>
+    <swiper style = "height:{{height}}rpx;" vertical = "true" current = "{{portSelected}}" class = "portSwiper" bindchange = "swiping">
+        <block wx:for = "{{portofolio}}" wx:key = "{{index}}" wx:for-item = "val">
+            <swiper-item>
+                <view class = "portDist">
+                    <view class = "portItem" wx:for = "{{val.inclusive}}" data-id = "{{val.keyword}}" id = "{{index}}" wx:key = "{{index}}" bindtap = 'toWords'>{{item}}</view>
+                </view>
+            </swiper-item>
+        </block>
+    </swiper>
+</view>

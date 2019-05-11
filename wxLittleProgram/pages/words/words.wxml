@@ -1,0 +1,14 @@
+<!--pages/words/words.wxml-->
+<view>
+    <image class = "headerImg" src = "{{headerImg}}"></image>
+    <view class = "wordHeader">
+        <view class = "wordTitle">{{word}}</view>
+        <view wx:if = "{{folded==false}}" class = "unfolded" bindtap = "wordFold">
+            <image src = "/image/unfolded.png"></image>加入生词本
+        </view>
+        <view wx:else class = "folded" bindtap = "wordFold">
+            <image src = "/image/folded.png"></image>加入生词本
+        </view>
+    </view>
+    <view class = "wordContent">一种{{keyword}}，用于{{usage}}。バイオ・ライフサイエンス分野に代表されるデータ分析や研究開発の超高速化を支援するプラットフォーマーとして最新の高速演算環境をクラウドサービスとして顧客に提供するエクストリーム−D株式会社（以下エクストリーム−D）は、2018年11月、次世代型スパコンクラウドプラットフォーム「XTREME-Stargate™️」をリリースした。そして2019年4月、このXTREME-Stargate™️の新たな技術基盤として採用されたのが、最新の第2世代インテル® Xeon® スケーラブル・プロセッサーだ。XTREME-Stargate™️には他にも、様々なインテル・テクノロジーが利用されている。これによりXTREME-Stargate™️は、「シミュレーション」と「AIデータ分析」で高スループットを実現する次世代型のHPCクラウドインフラストラクチャーへと進化した。</view>
+</view>

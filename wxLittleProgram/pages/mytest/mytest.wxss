@@ -1,0 +1,9 @@
+/* pages/mytest/mytest.wxss */
+.whole{
+  background-color: #f0f0f0;
+}
+.content{
+  padding-top: 200rpx;
+  text-align: center;
+  color:gray;
+}

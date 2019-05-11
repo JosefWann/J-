@@ -1,0 +1,37 @@
+/* pages/myfav/myfav.wxss */
+.whole{
+  background-color: #f0f0f0;
+}
+.foldEssay{
+  height: 150rpx;
+  background-color: white;
+  border-bottom: #f0f0f0 solid 20rpx;
+  padding: 20rpx;
+}
+.title{
+  color:gray;
+  font-size: 33rpx;
+}
+.userInfo{
+  display: flex;
+  flex-direction: row;
+  color: lightgray;
+  font-size: 30rpx;
+  align-items: center;
+}
+.userInfo>image{
+  width: 30rpx;
+  height: 30rpx;
+  border-radius: 15rpx;
+  margin-left: 10rpx;
+}
+.content{
+  color: lightgray;
+  font-size:27rpx;
+  height: 75rpx;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  display: -webkit-box; 
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2; 
+}

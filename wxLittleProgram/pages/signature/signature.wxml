@@ -1,0 +1,8 @@
+<!--pages/signature/signature.wxml-->
+<view class = "whole" style = "height:{{windowHeight}}rpx">
+    <view class = "sign">
+        <input type = "text" bindconfirm = "inputSubmit" bindinput = "inputChange" value = "{{signature}}" />
+        <view>{{inputCount}}/30</view>
+    </view>
+</view>
+

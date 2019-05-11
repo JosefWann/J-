@@ -1,0 +1,34 @@
+<!--pages/essay/essay.wxml-->
+<view>
+    <image class = "headerImg" src = "{{essayInfo.headerImg}}"></image>
+    <view class = "authorInfo">
+        <image class = "authorAvatar" src = "{{essayInfo.avatar}}"></image>
+        <view>
+            <view class = "authorName">{{essayInfo.author}}</view>
+            <view class = "authorSign">{{essayInfo.signature}}</view>
+        </view>
+    </view>
+    <view class = "essayTitle">{{title}}</view>
+    <view class = "essayContent">Ein Aktienindex ist eine Kennzahl für die Entwicklung von ausgewählten Aktienkursen. Er soll die Entwicklung auf diesem Teilmarkt des weltweiten Finanzgeschehens repräsentativ dokumentieren. Den Ausgangspunkt für die Berechnung eines Aktienindex bildet stets ein bestimmter Zeitpunkt. Die nachfolgenden Änderungen der Kennzahl Aktienindex im Zeitablauf spiegeln fortan die Wertentwicklung (Performance) der im hypothetischen Portfolio enthaltenen Aktien wider. Aktienindizes eignen sich im Allgemeinen als ein einfaches, aber dennoch nützliches Stimmungsbarometer („Börsenbarometer“) für einzelne Volkswirtschaften bzw. bestimmte Wirtschaftsbereiche.
+Im weiteren Sinn werden auch Indizes als Aktienindex bezeichnet, die nicht direkt Aktienkurse repräsentieren, sondern andere, von Aktienkursen abhängige Finanzderivate. Ein Beispiel hierfür ist der deutsche Volatilitätsindex VDAX.
+    </view>
+    <view class = "essayDate">{{essayInfo.date}}</view>
+    <view style = "height:100rpx;"></view>
+    <view class = "essayFooter">
+        <view class = "footerBtn" bindtap = "essayVote">
+            <text class = "{{essayVoted==true?'selected':''}}">赞同</text>
+            <image wx:if = "{{essayVoted==true}}" src= "/image/essayVoteSel.png"></image>
+            <image wx:else src = "/image/essayVote.png"></image>
+        </view>
+        <view class = "footerBtn" bindtap = "essayLike">
+            <text class = "{{essayLiked==true?'selected':''}}">感谢</text>
+            <image wx:if = "{{essayLiked==true}}" src= "/image/essayLikeSel.png"></image>
+            <image wx:else src = "/image/essayLike.png"></image>
+        </view>
+        <view class = "footerBtn" bindtap = "essayFold">
+            <text class = "{{essayFolded==true?'selected':''}}">收藏</text>
+            <image style = "height:30rpx;" wx:if = "{{essayFolded==true}}" src= "/image/essayFoldSel.png"></image>
+            <image style = "height:30rpx;" wx:else src = "/image/essayFold.png"></image>
+        </view>
+    </view>
+</view>
